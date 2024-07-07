@@ -6,7 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/ui/icons";
 
-export default function DashboardLeftSidebar() {
+export default function Login1() {
   return (
     <div className="flex h-screen w-full items-center justify-center bg-white">
       <div className="w-[400px] space-y-6">

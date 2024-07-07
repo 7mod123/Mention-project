@@ -8,14 +8,14 @@ import rightContentImage from "@/public/images/Right Content.png"; // Make sure 
 import logoImage from "@/public/images/LogoM.png"; // Add this import
 import ResetPassword from "@/components/sections/ResetPassword";
 import RightSection from "@/components/sections/RightSection";
-import Login1 from "@/components/sections/Login1";
+import CompanyName from "@/components/sections/RegesterCompanyName";
 
 export default function Home() {
   return (
     <section className="flex flex-col lg:flex-row">
       <section className="flex h-screen w-full flex-col justify-between p-9 lg:h-auto">
         <Wrapper>
-          <ResetPassword /> {/* Use the capitalized component name */}
+          <CompanyName /> {/* Use the capitalized component name */}
         </Wrapper>
       </section>
 
