@@ -11,7 +11,7 @@ export default function Login1() {
   return (
     <div className="flex min-h-screen w-full items-center justify-center bg-white p-4">
       <div className="flex w-full max-w-[400px] flex-col items-start justify-center gap-6 rounded-lg p-6 sm:max-w-[450px] sm:p-8 md:max-w-[500px] lg:max-w-[576px]">
-        <h2 className="w-full text-center text-xl font-bold text-[#111928]">
+        <h2 className="w-full text-xl font-bold text-[#111928]">
           Welcome back
         </h2>
 
@@ -109,7 +109,7 @@ export default function Login1() {
           </Button>
         </div>
 
-        <p className="w-full text-center text-sm text-[#6B7280]">
+        <p className="w-full text-left text-sm text-[#6B7280]">
           Don't have an account yet?{" "}
           <Link href="/Regester-page" className="font-medium text-[#3460FB]">
             Start your 14-day free trial
