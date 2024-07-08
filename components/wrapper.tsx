@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const SECTION_DATA = [
   { label: 1, href: "/", isFirst: true, isLast: false },
-  { label: 2, href: "/page-2", isFirst: false, isLast: false },
+  { label: 2, href: "/reset-password", isFirst: false, isLast: false },
   { label: 3, href: "/page-3", isFirst: false, isLast: false },
   { label: 4, href: "/page-4", isFirst: false, isLast: false },
   { label: 5, href: "/page-5", isFirst: false, isLast: false },

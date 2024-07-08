@@ -3,7 +3,7 @@
  */
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import Home from "@/app/page-3/page";
+import Home from "@/app/Regester-page/page";
 
 describe("Home", () => {
   it("A short description of the invention of the computer mouse.", () => {

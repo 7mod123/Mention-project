@@ -3,63 +3,62 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const CompanySizeForm = () => {
   const companySizes = ["1 - 5", "6 - 10", "11 - 100", "100+"];
   const [selectedSize, setSelectedSize] = useState("11 - 100");
 
   return (
-    <Card className="w-[576px] p-8">
-      <CardHeader className="px-0 pt-0">
-        <CardTitle className="text-xl font-bold text-gray-900">
+    <div className="flex min-h-screen w-full items-center justify-center bg-white p-4">
+      <div className="flex w-full max-w-[400px] flex-col items-start justify-center gap-6 rounded-lg p-6 sm:max-w-[450px] sm:p-8 md:max-w-[500px] lg:max-w-[576px]">
+        <h2 className="w-full text-lg font-bold leading-tight text-[#111928] sm:text-xl">
           What size is your company?
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="px-0 pb-0">
-        <p className="mb-4 text-sm text-gray-600">
-          How many people work at your company
-        </p>
-        <div className="mb-6 flex space-x-5">
-          {companySizes.map((size) => (
-            <Button
-              key={size}
-              variant={selectedSize === size ? "outline" : "ghost"}
-              className={`h-[46px] flex-1 ${
-                selectedSize === size
-                  ? "border-blue-600 text-blue-600"
-                  : "border-gray-200 text-gray-600"
-              }`}
-              onClick={() => setSelectedSize(size)}
-            >
-              {size}
-            </Button>
-          ))}
+        </h2>
+        <div className="w-full space-y-2">
+          <label className="block text-sm font-medium text-[#111928]">
+            How many people work at your company
+          </label>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-5">
+            {companySizes.map((size) => (
+              <Button
+                key={size}
+                variant="outline"
+                className={`h-[46px] text-base sm:text-lg ${
+                  selectedSize === size
+                    ? "border-[#3460FB] text-[#3460FB]"
+                    : "border-[#F1F3F5] bg-[#F9FAFB] text-[#6B7280]"
+                }`}
+                onClick={() => setSelectedSize(size)}
+              >
+                {size}
+              </Button>
+            ))}
+          </div>
         </div>
-        <Button className="mb-6 w-full bg-blue-600 text-white hover:bg-blue-700">
+        <Button className="h-[50px] w-full bg-[#3460FB] text-base font-medium text-white">
           Start free trial
         </Button>
-        <div className="space-y-3">
+        <div className="w-full space-y-3">
           <div className="flex items-start space-x-2">
-            <Checkbox id="terms" />
+            <Checkbox id="terms" className="mt-1" />
             <label
               htmlFor="terms"
-              className="text-xs leading-tight text-gray-600"
+              className="text-xs leading-[150%] text-[#4B5563]"
             >
               By signing up, you are creating a Fluent account, and you agree to
-              fluent <span className="text-blue-600">Terms of Use</span> and{" "}
-              <span className="text-blue-600">Privacy Policy</span>.
+              fluent <span className="text-[#3460FB]">Terms of Use</span> and{" "}
+              <span className="text-[#3460FB]">Privacy Policy</span>.
             </label>
           </div>
           <div className="flex items-center space-x-2">
             <Checkbox id="newsletter" />
-            <label htmlFor="newsletter" className="text-xs text-gray-600">
+            <label htmlFor="newsletter" className="text-xs text-[#4B5563]">
               Email me about product updates and resources.
             </label>
           </div>
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 };
 

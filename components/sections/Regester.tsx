@@ -1,22 +1,23 @@
 import React from "react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Icons } from "@/components/ui/icons";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Regester = () => {
+  const router = useRouter();
+
   return (
-    <Card className="w-[576px] p-8">
-      <CardHeader className="space-y-1 px-0">
-        <h2 className="text-2xl font-bold text-gray-900">
+    <div className="flex min-h-screen w-full items-center justify-center bg-white p-4">
+      <div className="flex w-full max-w-[400px] flex-col items-start gap-6 rounded-lg p-6 sm:max-w-[450px] sm:p-8 md:max-w-[500px] lg:max-w-[576px]">
+        <h1 className="w-full text-xl font-bold text-[#111928]">
           Your Best Work Starts Here
-        </h2>
-      </CardHeader>
-      <CardContent className="space-y-6 px-0">
-        <div className="space-y-2">
+        </h1>
+        <div className="w-full space-y-2">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-900"
+            className="block text-sm font-medium text-[#111928]"
           >
             Business Email
           </label>
@@ -24,44 +25,63 @@ const Regester = () => {
             id="email"
             type="email"
             placeholder="Enter your email"
-            className="w-full border border-gray-200 bg-gray-50 p-3"
+            className="h-[50px] w-full rounded-md border border-[#F1F3F5] bg-[#F9FAFB] px-4 py-3 text-sm text-[#6B7280]"
           />
         </div>
 
-        <div className="relative flex items-center justify-center">
-          <div className="absolute w-full border-t border-gray-300"></div>
+        <div className="relative flex w-full items-center justify-center">
+          <div className="absolute w-full border-t border-[#F1F3F5]"></div>
           <div className="relative bg-white px-4">
-            <span className="text-sm text-gray-500">or</span>
+            <span className="text-base font-medium text-[#6B7280]">or</span>
           </div>
         </div>
 
-        <div className="flex space-x-4">
+        <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
           <Button
             variant="outline"
-            className="flex-1 items-center justify-center space-x-2 py-5"
+            className="flex h-[50px] items-center justify-center space-x-2 border-[#F1F3F5]"
           >
-            <Icons.google className="h-5 w-5" />
-            <span>Sign up with Google</span>
+            <Image
+              src="/images/Google - Original.svg"
+              alt="Google logo"
+              width={20}
+              height={20}
+            />
+            <span className="text-sm font-medium text-[#1F2A37]">
+              Sign up with Google
+            </span>
           </Button>
           <Button
             variant="outline"
-            className="flex-1 items-center justify-center space-x-2 py-5"
+            className="flex h-[50px] items-center justify-center space-x-2 border-[#F1F3F5]"
           >
-            <Icons.microsoft className="h-5 w-5" />
-            <span>Sign up with Microsoft</span>
+            <Image
+              src="/images/microsoft.svg"
+              alt="Microsoft logo"
+              width={20}
+              height={20}
+            />
+            <span className="text-sm font-medium text-[#1F2A37]">
+              Sign up with Microsoft
+            </span>
           </Button>
         </div>
 
-        <Button className="w-full bg-blue-600 py-6 text-white">Sign Up</Button>
+        <Button
+          className="h-[50px] w-full bg-[#3460FB] text-base font-medium text-white"
+          onClick={() => router.push("/company-name")}
+        >
+          Sign Up
+        </Button>
 
-        <p className="text-center text-sm text-gray-500">
+        <p className="w-full text-center text-sm text-[#6B7280]">
           Already have an account?{" "}
-          <a href="#" className="text-blue-600">
+          <Link href="/" className="font-medium text-[#3460FB] hover:underline">
             Login here
-          </a>
+          </Link>
         </p>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 };
 
