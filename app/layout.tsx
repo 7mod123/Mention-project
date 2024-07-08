@@ -2,32 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Provider } from "@/components/provider";
 
-import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 
-const spaceMono = localFont({
-  src: [
-    {
-      path: "../public/fonts/space-mono/SpaceMono-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/space-mono/SpaceMono-Italic.ttf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../public/fonts/space-mono/SpaceMono-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/space-mono/SpaceMono-BoldItalic.ttf",
-      weight: "700",
-      style: "italic",
-    },
-  ],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Kaminari",
@@ -85,10 +62,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${spaceMono.className}`}>
+      <body className={inter.className}>
         <Provider attribute="class" defaultTheme="system" enableSystem>
           <main
-            className={`text-zinc-700 bg-white dark:text-zinc-400 dark:bg-black`}
+            className={`bg-white text-zinc-700 dark:bg-black dark:text-zinc-400`}
           >
             {children}
           </main>
