@@ -62,11 +62,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} flex min-h-screen flex-col`}>
         <Provider attribute="class" defaultTheme="system" enableSystem>
-          <main
-            className={`bg-white text-zinc-700 dark:bg-black dark:text-zinc-400`}
-          >
+          <main className="flex-grow bg-white text-zinc-700 dark:bg-black dark:text-zinc-400">
             {children}
           </main>
         </Provider>

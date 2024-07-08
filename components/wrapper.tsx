@@ -41,9 +41,9 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
   ]);
 
   return (
-    <>
-      {children}
-      <div className="flex w-full items-center justify-between">
+    <div className="flex min-h-screen flex-col">
+      <div className="flex-grow">{children}</div>
+      {/* <div className="flex w-full items-center justify-between">
         <Link href={previousPage as string} passHref>
           <Button
             disabled
@@ -71,7 +71,7 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
             <span className="">Next</span>
           </Button>
         </Link>
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 }
