@@ -3,10 +3,12 @@
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const RegesterName = () => {
   const [regesterName, setRegesterName] = useState("");
   const [error, setError] = useState("");
+  const router = useRouter();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -21,6 +23,7 @@ const RegesterName = () => {
       setError("Name is required");
     } else {
       console.log("Form submitted with name:", regesterName);
+      router.push("/regesterPassword");
     }
   };
 

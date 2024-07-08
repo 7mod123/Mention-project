@@ -40,6 +40,7 @@ const Regester = () => {
           <Button
             variant="outline"
             className="flex h-[50px] items-center justify-center space-x-2 border-[#F1F3F5]"
+            onClick={() => router.push("/regesterName")}
           >
             <Image
               src="/images/Google - Original.svg"
@@ -54,6 +55,7 @@ const Regester = () => {
           <Button
             variant="outline"
             className="flex h-[50px] items-center justify-center space-x-2 border-[#F1F3F5]"
+            onClick={() => router.push("/regesterName")}
           >
             <Image
               src="/images/microsoft.svg"

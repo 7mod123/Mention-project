@@ -3,10 +3,12 @@
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const RegesterPassword = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const router = useRouter();
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
@@ -18,7 +20,7 @@ const RegesterPassword = () => {
       setError("Password must be at least 8 characters long");
     } else {
       console.log("Password set successfully");
-      // Add your form submission logic here
+      router.push("/"); // Navigate to the home page
     }
   };
 
