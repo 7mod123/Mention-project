@@ -1,25 +1,20 @@
 "use client";
 
-import Image from "next/image";
-import Wrapper from "@/components/wrapper";
-import { Button } from "@/components/ui/button";
-
-import rightContentImage from "@/public/images/Right Content.png"; // Make sure this path is correct
-import logoImage from "@/public/images/LogoM.png"; // Add this import
-import ResetPassword from "@/components/sections/ResetPassword";
 import RightSection from "@/components/sections/RightSection";
 import CompanySize from "@/components/sections/CompanySize";
 
 export default function Home() {
   return (
-    <section className="flex flex-col lg:flex-row">
-      <section className="flex h-screen w-full flex-col justify-between p-9 lg:h-auto">
-        <Wrapper>
-          <CompanySize /> {/* Use the capitalized component name */}
-        </Wrapper>
-      </section>
+    <div className="flex min-h-screen flex-col">
+      <div className="flex-grow">
+        <section className="flex h-screen flex-col lg:flex-row">
+          <section className="flex w-full flex-col justify-between lg:h-auto">
+            <CompanySize /> {/* Use the capitalized component name */}
+          </section>
 
-      <RightSection />
-    </section>
+          <RightSection />
+        </section>
+      </div>
+    </div>
   );
 }

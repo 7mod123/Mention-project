@@ -1,19 +1,20 @@
 "use client";
 
-import Wrapper from "@/components/wrapper";
 import RightSection from "@/components/sections/RightSection";
 import RegesterPassword from "@/components/sections/RegesterPassword";
 
 export default function Home() {
   return (
-    <section className="flex flex-col lg:flex-row">
-      <section className="flex h-screen w-full flex-col justify-between p-9 lg:h-auto">
-        <Wrapper>
-          <RegesterPassword /> {/* Use the capitalized component name */}
-        </Wrapper>
-      </section>
+    <div className="flex min-h-screen flex-col">
+      <div className="flex-grow">
+        <section className="flex h-screen flex-col lg:flex-row">
+          <section className="flex w-full flex-col justify-between lg:h-auto">
+            <RegesterPassword /> {/* Use the capitalized component name */}
+          </section>
 
-      <RightSection />
-    </section>
+          <RightSection />
+        </section>
+      </div>
+    </div>
   );
 }
